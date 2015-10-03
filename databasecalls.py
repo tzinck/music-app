@@ -29,6 +29,12 @@ def deleteall():
 	cursor.execute('''DELETE FROM songs''')
 	db.commit()
 
+def deletesong(songname):
+	cursor.execute('''
+		DELETE FROM songs WHERE NAME = (?)
+			''',(songname,))
+	db.commit()
+
 
 	
 

@@ -1,6 +1,8 @@
 import os
 import sys
+import actions
 from databasecalls import *
+
 
 #File to contain the bulk of the application (for now, in the preliminary stages)
 
@@ -21,3 +23,7 @@ while(1):
 	if(action == 'deleteall'):
 		#handle deletion
 		deleteall()
+	if(action == 'delete'):
+		#handle delete single song
+		name = input('Delete which song?: ')
+		deletesong(name)
