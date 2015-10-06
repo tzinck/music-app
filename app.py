@@ -1,6 +1,5 @@
 import os
 import sys
-import actions
 from databasecalls import *
 
 
@@ -27,3 +26,8 @@ while(1):
 		#handle delete single song
 		name = input('Delete which song?: ')
 		deletesong(name)
+	if(action == 'progress'):
+		#handle change of progress value
+		name = input('Which song should have it\'s progress updated?: ')
+		progress = input('Out of ten, how much of the song do you know?: ')
+		editProgress(name, progress)
